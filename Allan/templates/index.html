@@ -15,12 +15,12 @@
 </head>
 <body>
     <!-- ===== HEADER ===== -->
-    <header class="1-header">
+    <header class="l-header">
         <nav class="nav bd-grid">
             <div><a href="#" class="nav__logo">{{ home.name }}</a></div>
 
             <div class="nav__menu" id="nav-menu">
-                <ul class="nav_list">
+                <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
@@ -35,7 +35,7 @@
         </nav>
     </header>
 
-    <main class="1-main">
+    <main class="l-main">
         <!-- ===== HOME ===== -->
         <section class="home" id="home">
             <div class="home__container bd-grid">
@@ -66,7 +66,7 @@
                     <div class="about__social">
                         {% for profile in about.profile_set.all %}
                             <a href="{{ profile.link }}" class="about__social-icon">
-                                <i class="bx bx1-{{ profile.social_name }}"></i>
+                                <i class="bx bxl-{{ profile.social_name }}"></i>
                             </a>
                         {% endfor %}
                     </div>
@@ -87,7 +87,7 @@
                     {% endfor %}
                 </div>
                 <div class="skills__img">
-                    <img src="{% static 'assets/img/skill.jpg'%}" alt="">
+                    <img src="{% static 'assets/img/skills.jpg'%}" alt="">
                 </div>
             </div>
         </section>
@@ -101,7 +101,7 @@
                     <div class="portfolio__img">
                         <img src="{{ project.image.url }}" alt="">
                         <div class="portfolio__link">
-                            <a href="{{ portfolio.link }}" class="portfoli__link-name">View details</a>
+                            <a href="{{ project.link }}" class="portfoli__link-name">View details</a>
                         </div>
                     </div>
                 {% endfor %}
@@ -120,6 +120,8 @@
                 <div class="contact__info">
                     <h3 class="contact__subtitle">PHONE</h3>
                     <span class="contact__text">+254 796 948746</span>
+                    <br>
+                    <span class="contact__text">+254 711 209474</span>
                 </div>
             </div>
         </section>
@@ -139,16 +141,16 @@
                     <li><a href="#home" class="footer__link">Home</a></li>
                     <li><a href="#about" class="footer__link">About</a></li>
                     <li><a href="#skills" class="footer__link">Skills</a></li>
-                    <li><a href="#projects" class="footer__link">Projects</a></li>
+                    <li><a href="#project" class="footer__link">Projects</a></li>
                     <li><a href="#Contact" class="footer__link">Contact</a></li>
                 </ul>
             </div>
 
             <div class="footer__data">
                 <h2 class="footer__title">FOLLOW</h2>
-                <a href="#" class="footer__social"><i class="bx bx1-facebook"></i></a>
-                <a href="#" class="footer__social"><i class="bx bx1-instagram"></i></a>
-                <a href="#" class="footer__social"><i class="bx bx1-twitter"></i></a>
+                <a href="www.linkedin.com/in/allan-dzombo-3a0476208" class="footer__social"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/dzomboallan" class="footer__social"><i class="bx bxl-github"></i></a>
+                <a href="https://twitter.com/dzombo_" class="footer__social"><i class="bx bxl-twitter"></i></a>
             </div>
         </div>
     </footer>
