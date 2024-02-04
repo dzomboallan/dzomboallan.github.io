@@ -183,19 +183,22 @@ img{
 }
 .home__container{
     height: calc(100vh - var(--header-height));
+    display: flex;
+    justify-content: space-evenly;
     row-gap: 5rem;
 }
 .home__title{
-    align-self: flex-end;
+    align-self: center;
     font-size: var(--big-font-size);
     color: var(--white-color);
     line-height: .8;
+    top: 0;
 }
 .home__title span{
     text-shadow: 0 20px 25px rgba(0,0,0,.5);
 }
 .home__scroll{
-    align-self: flex-end;
+    align-self:center;
     padding-bottom: var(--mb-4);
 }
 .home__scroll-link{
@@ -204,10 +207,11 @@ img{
     color: var(--white-color);
 }
 .home__img{
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    position: relative;
+    overflow: hidden;
     width: 295px;
+    left: 20%;
+    top: 10%;
 }
 
 /* ===== ABOUT =====*/
