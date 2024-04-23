@@ -4,9 +4,11 @@ from .models import Home, About, Profile, Category, Skills, Project
 # Register your models here.
 admin.site.register(Home)
 
+
 class ProfileInline(admin.TabularInline):
     model = Profile
     extra = 1
+
 
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
@@ -14,15 +16,18 @@ class AboutAdmin(admin.ModelAdmin):
         ProfileInline,
     ]
 
+
 class SkillsInline(admin.TabularInline):
     model = Skills
     extra = 2
+
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     inlines = [
         SkillsInline,
     ]
+
 
 admin.site.register(Project)
 

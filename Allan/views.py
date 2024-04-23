@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Home, About, Profile, Category, Skills, Project
+from .models import Home, About, Profile, Category, Project
+
 
 # Create your views here.
 def index(request):
